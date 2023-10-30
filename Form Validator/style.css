@@ -5,18 +5,33 @@
   --error-color: #e74c3c;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f9fafb;
+  background: linear-gradient(-45deg, #1057e3, #862395, #bbdce8, #23d5ab);
   font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
 }
 
 .container {
